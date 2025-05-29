@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #FFF8EE;
   --foreground: #171717;
 }
 
@@ -12,12 +12,45 @@
   --font-mono: var(--font-geist-mono);
 }
 
+@theme {
+  --color-main-green: #6EB63C;
+  --color-text-gray: #333333;
+  --color-main-gray: #3333331A;
+  --color-secondary-green: #C7D30A;
+  --color-digits-border: #FFF8EE4D;
+  --font-pt-root: 'PT Root UI';
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
 }
+
+@font-face {
+  font-family: 'PT Root UI';
+  src: url('/public/fonts/PT_Root_UI/regular/pt-root-ui_regular.woff2') format('woff2'),
+       url('/public/fonts/PT_Root_UI/regular/pt-root-ui_regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PT Root UI';
+  src: url('/public/fonts/PT_Root_UI/bold/pt-root-ui_bold.woff') format('woff'),
+       url('/public/fonts/PT_Root_UI/bold/pt-root-ui_bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@layer base {
+  .content-styles ul {
+    list-style-type: disc;
+    padding-left: 1rem;
+  }
+}
+
 
 body {
   background: var(--background);

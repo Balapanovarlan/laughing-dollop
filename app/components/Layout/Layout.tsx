@@ -1,12 +1,16 @@
 import { LayoutProps } from '@/app/types/types'
-import React from 'react'
+import React, { useState } from 'react'
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
+import Sidebar from '../Sidebar/Sidebar'
 
 const Layout = ({children}: LayoutProps ) => {
+  const [isOpen, setIsOpen] = useState(false);
+  
   return (
-    <div>
-        <Header/>
+    <div className='flex-col items-center justify-center gap-25'>
+        <Header setIsOpen = {setIsOpen}/>
+        <Sidebar isOpen = {isOpen} setIsOpen = {setIsOpen}/>
         <main>{children}</main>
         <Footer/>
     </div>

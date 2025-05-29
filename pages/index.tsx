@@ -1,35 +1,32 @@
-import { useMainCompany } from "@/app/hooks/useMainCompany";
-
-// interface Company{
-//   description : string;
-//   image: string;
-//   title: string;
-// }
+import { useDigitsCompany, useMainCompany, useSolutionCompany } from "@/app/hooks/useAboutCompany";
+import AboutUsSection from "@/app/pages/home/AboutUsSection/AboutUsSection";
+import DigitsSection from "@/app/pages/home/DigitsSection/DigitsSection";
+import HomePage from "@/app/pages/home/HomePage";
+import UniqueSolutionSection from "@/app/pages/home/UniqueSolutionSection/UniqueSolutionSection";
 
 export default function Home() {
   
-  const {data: mainInfo, isLoading, isError} = useMainCompany();
+  const {data: mainInfo, isLoading: isMainLoading, isError: isMainError} = useMainCompany();
+  const {data: digitsInfo, isLoading: isDigitsLoading, isError: isDigitsError} = useDigitsCompany();
+  const {data: solutionsInfo, isLoading: isSolutionsLoading, isError: isSolutionsError} = useSolutionCompany();
   
-  console.log(mainInfo);
-  
-
-  if (isLoading) {
+  if (isMainLoading||isDigitsLoading) {
     return <span>Loading</span>
   }
 
-  if (isError){
+  if (isMainError||isDigitsError){
     return <span>Error!</span>
   }
 
+  // console.log(digitsInfo);
+  // console.log(solutionsInfo);
+  
   return (
-   <div className="flex p-4">
-    <div className="flex justify-center items-center py-2">
-      <div className="flex-col justify-center items-center">
-        <h1 className="text-2xl font-bold mb-4">{mainInfo.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: mainInfo.description }} />
-      </div>
-      <img src={mainInfo.image} alt="Фото компании" className="mb-4" />
-    </div>
-</div>
+   <section>
+        {/* <AboutUsSection mainInfo={mainInfo}/>
+        <UniqueSolutionSection/>
+        <DigitsSection/> */}
+        <HomePage mainInfo={mainInfo}/>
+  </section>
   );
 }
