@@ -19,6 +19,12 @@
   --color-secondary-green: #C7D30A;
   --color-digits-border: #FFF8EE4D;
   --font-pt-root: 'PT Root UI';
+  --breakpoint-xss: 22.5rem;
+  --breakpoint-xs: 36rem;
+  --breakpoint-xm: 70rem;
+  --breakpoint-xl: 87.5rem;
+  --breakpoint-xxl: 100rem;
+  --breakpoint-xxxl: 119.8rem
 }
 
 @media (prefers-color-scheme: dark) {

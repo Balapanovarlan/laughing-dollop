@@ -8,7 +8,7 @@ const Layout = ({children}: LayoutProps ) => {
   const [isOpen, setIsOpen] = useState(false);
   
   return (
-    <div className='flex-col items-center justify-center gap-25'>
+    <div className='flex-col items-center justify-center gap-25 overflow-hidden'>
         <Header setIsOpen = {setIsOpen}/>
         <Sidebar isOpen = {isOpen} setIsOpen = {setIsOpen}/>
         <main>{children}</main>

@@ -9,7 +9,7 @@ const Header = ({setIsOpen}: HeaderProps) => {
     <header className='pl-6 pr-9 sticky top-0 bg-background'>
         <div className='flex justify-between py-6 border-b border-text-gray/10'>
           <button onClick={()=>setIsOpen(true)}><Equal/></button>
-          <Image src={Logo} width={153} height={85} alt='Logo'></Image>
+          <Image src={Logo} alt='Logo' className='w-full max-w-[118px] xs:max-w-[183px]'></Image>
           <button className='p-1.5 bg-text-gray/10 rounded-full text-text-gray/74 font-bold '>RU</button>
         </div>
     </header>
