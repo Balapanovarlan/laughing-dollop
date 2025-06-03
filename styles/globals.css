@@ -1,14 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
 @import "tailwindcss";
 
 :root {
   --background: #FFF8EE;
   --foreground: #171717;
+  --font-secondary: 'Inter', sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-sans);
   --font-mono: var(--font-geist-mono);
 }
 
@@ -18,13 +27,13 @@
   --color-main-gray: #3333331A;
   --color-secondary-green: #C7D30A;
   --color-digits-border: #FFF8EE4D;
-  --font-pt-root: 'PT Root UI';
   --breakpoint-xss: 22.5rem;
   --breakpoint-xs: 36rem;
   --breakpoint-xm: 70rem;
   --breakpoint-xl: 87.5rem;
   --breakpoint-xxl: 100rem;
-  --breakpoint-xxxl: 119.8rem
+  --breakpoint-xxxl: 119.8rem;
+  --font-inter: 'Inter'; 
 }
 
 @media (prefers-color-scheme: dark) {
@@ -34,21 +43,6 @@
   }
 }
 
-@font-face {
-  font-family: 'PT Root UI';
-  src: url('/public/fonts/PT_Root_UI/regular/pt-root-ui_regular.woff2') format('woff2'),
-       url('/public/fonts/PT_Root_UI/regular/pt-root-ui_regular.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'PT Root UI';
-  src: url('/public/fonts/PT_Root_UI/bold/pt-root-ui_bold.woff') format('woff'),
-       url('/public/fonts/PT_Root_UI/bold/pt-root-ui_bold.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-}
 
 @layer base {
   .content-styles ul {
@@ -58,8 +52,3 @@
 }
 
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}

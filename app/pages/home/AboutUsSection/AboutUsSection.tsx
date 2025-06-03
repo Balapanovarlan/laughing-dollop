@@ -14,7 +14,7 @@ const AboutUsSection = ({mainInfo} :{ mainInfo : MainInfo}) => {
               <span className="text-main-green">{firstWordTitle}</span> 
               <span>{secondWordTitle}</span>
             </h1>
-            <div className="flex flex-col text-[14px] gap-4 content-styles text-text-gray/87 xxl:text-lg" dangerouslySetInnerHTML={{ __html: mainInfo.description }} />
+            <div className="flex flex-col font-inter text-[14px] gap-4 content-styles text-text-gray/87 xxl:text-lg" dangerouslySetInnerHTML={{ __html: mainInfo.description }} />
           </div>
           <button className="flex justify-center w-full py-4.5 pl-6 pr-5.25 border-2 text-main-green border-main-green rounded-[50px] hover:bg-main-green/20 xm:w-fit">
             Связаться c нами <ArrowUpRight/>
