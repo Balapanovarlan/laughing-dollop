@@ -28,11 +28,11 @@ const Sidebar = ({isOpen, setIsOpen}: SidebarProps) => {
                         <a href="/news" className='py-8 px-34.75 border-b-1  border-text-gray/10'>Новости</a>
                     </nav>
                     <div className="p-4">
-                        <button className="flex items-center gap-2 border border-text-gray/20 text-text-gray/85 rounded-[50px] py-4 pl-10 pr-10 hover:bg-text-gray/30">
+                        <a href='/contact-us' className="flex items-center gap-2 border border-text-gray/20 text-text-gray/85 rounded-[50px] py-4 pl-10 pr-10 hover:bg-text-gray/30">
                             Связаться с нами <ArrowUpRight />
-                        </button>
+                        </a>
                     </div>
-                </div>
+                </div>  
             </div>
         </div>
     

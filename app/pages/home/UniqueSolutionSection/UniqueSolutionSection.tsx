@@ -10,19 +10,19 @@ const UniqueSolutionSection = () => {
   ]
   
   return (
-    <section className='flex flex-col gap-17.5 items-center pb-50'>
+    <section className='flex flex-col gap-6 pb-20 pl-4 xxl:gap-17.5 xs:items-center xxl:pb-50'>
         <div className='flex flex-col gap-6 items-center justify-center'>
-            <h1 className='text-5xl font-normal text-text-gray uppercase'>Уникальные решения</h1>
-            <p className='w-full max-w-[522px] text-center text-[18px]'>За эти годы мы создали развитую сеть по обеспечению фермеров уникальными комплексными решениями 
+            <h1 className='text-3xl xm:text-[40px] xxl:text-5xl font-normal text-text-gray uppercase'>Уникальные решения</h1>
+            <p className='w-full max-w-[522px] text-[14px] xm:text-[16px] xxl:text-center xxl:text-lg'>За эти годы мы создали развитую сеть по обеспечению фермеров уникальными комплексными решениями 
             в сельском хозяйстве Казахстана и Кыргызстана</p>
         </div>
-        <div className='flex flex-wrap justify-center gap-12.5 '>
+        <div className='flex flex-wrap gap-12.5 xs:justify-center xm:justify-around'>
             {solutions.map((item,index)=>(
                 <div key={index} 
-                className='flex justify-center items-center gap-5 py-5'
+                className='flex flex-col gap-1 xm:flex-row xxl:gap-5 py-5'
                 > 
-                    <span className='text-8xl text-main-green'>{item.number}</span>
-                    <p className='text-[18px] max-w-[285px] w-full'>{item.text}</p>
+                    <span className='text-5xl xm:text-[84px] xxl:text-8xl text-main-green'>{item.number}</span>
+                    <p className=' max-w-[285px] w-full text-xs xm:text-lg  xxl:text-lg'>{item.text}</p>
                 </div>
             ))}
         </div>

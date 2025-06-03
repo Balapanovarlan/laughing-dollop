@@ -6,7 +6,7 @@ import UniqueSolutionSection from './UniqueSolutionSection/UniqueSolutionSection
 
 const HomePage = ({mainInfo} : {mainInfo: MainInfo}) => {
   return (
-    <div className='flex flex-col gap-37.5 pt-25 '>
+    <div className='flex flex-col gap-20 xxxl:gap-37.5 xxxl:pt-25 '>
         <AboutUsSection mainInfo={mainInfo}/>
         <DigitsSection/>
         <UniqueSolutionSection/>
