@@ -1,6 +1,7 @@
+import { ISolutionsInfo } from '@/app/types/types'
 import React from 'react'
 
-const UniqueSolutionSection = () => {
+const UniqueSolutionSection = ( {solutionInfo} : {solutionInfo : ISolutionsInfo} ) => {
   const solutions = [
     { number: '3,6', text: '.млн га засеваются решениями для посева John Deere' },
     { number: '6,5', text: '.млн га убираются решениями для уборки John Deere' },

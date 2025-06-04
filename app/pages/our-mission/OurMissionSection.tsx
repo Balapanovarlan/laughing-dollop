@@ -24,7 +24,9 @@ const OurMissionSection = () => {
                         <p className='w-full max-w-[513px]'>Мы кормим мир, помогая фермерам внедрять и применять инновационные решения для развития сельского хозяйства и производства продукции наивысшего качества</p>
                     </div>
                </div>
-                <button className='flex gap-2 w-full justify-center py-4.5 border border-main-green rounded-[50px] uppercase text-main-green xl:max-w-60'>Связаться с нами <ArrowUpRight/> </button>    
+                <a href='/contact-us' className='flex gap-2 w-full justify-center py-4.5 border border-main-green rounded-[50px] uppercase text-main-green xl:max-w-60'>
+                    Связаться с нами 
+                <ArrowUpRight/> </a>    
             </div>
         </div>
 

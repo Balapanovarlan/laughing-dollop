@@ -10,6 +10,18 @@ export interface MainInfo{
   title: string;
 }
 
+export interface IDigitsInfo{
+  id: number;
+  title: string;
+  subtitle: string;
+}
+
+export interface ISolutionsInfo{
+  id: number;
+  title: string;
+  subtitle: string;
+}
+
 export interface testData {
   id: number;
   title: string;
